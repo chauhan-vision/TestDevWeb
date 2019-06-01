@@ -8,6 +8,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+       TestWeb web = new TestWeb();
+       web.setDriverPath("C:\\Users\\chauh\\eclipse-workspace\\UpdateProfile\\driver\\chromedriver.exe");
+       TestWeb.setBrowser("chrome");
+       web.openPage("https://monster.com");
+       web.click("xpath", "//*[@id=\"seekerLoginBtn\"]/a/span[2]");
+       
     }
 }
